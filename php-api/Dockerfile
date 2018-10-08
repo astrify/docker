@@ -18,7 +18,8 @@ RUN docker-php-ext-install \
   mbstring \
   opcache \
   pdo \
-  pdo_pgsql
+  pdo_pgsql \
+  zip
 
 # https://github.com/docker-library/php/issues/225#issuecomment-226870896
 RUN docker-php-ext-configure gd \
