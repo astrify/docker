@@ -23,11 +23,9 @@ COPY laravel-horizon.conf.tpl /etc/supervisor/conf.d/laravel-horizon.conf.tpl
 
 # Copy scripts
 COPY init.sh /usr/local/bin/init.sh
+RUN chmod u+x /usr/local/bin/init.sh
 
 # Add schedule command to crontab
 RUN echo '*  *  *  *  * php /var/www/app/artisan schedule:run >> /dev/null 2>&1' > /etc/crontabs/root
 
 VOLUME /var/www/app
-
-# Run supervisor
-ENTRYPOINT ["/bin/sh", "/usr/local/bin/init.sh"]
