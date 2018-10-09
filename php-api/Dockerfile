@@ -29,3 +29,6 @@ RUN docker-php-ext-configure gd \
   --with-jpeg-dir=/usr/include/ && \
 NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) && \
 docker-php-ext-install -j${NPROC} gd
+
+COPY php.ini /usr/local/etc/php/
+COPY .bash_aliases /root/.bash_aliases
