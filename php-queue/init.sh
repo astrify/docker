@@ -1,4 +1,5 @@
 #!/bin/sh
+crond
 
 if [ -z "$QUEUE_CONNECTION" ]; then
 	QUEUE_CONNECTION="redis"
