@@ -27,5 +27,3 @@ RUN chmod u+x /usr/local/bin/init.sh
 
 # Add schedule command to crontab
 RUN echo '*  *  *  *  * php /var/www/app/artisan schedule:run >> /dev/null 2>&1' > /etc/crontabs/root
-
-VOLUME /var/www/app

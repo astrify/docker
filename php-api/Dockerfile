@@ -1,4 +1,4 @@
-FROM php:7-fpm-alpine
+FROM php:7-alpine
 
 RUN apk update && apk add curl && \
   curl -sS https://getcomposer.org/installer | php \
