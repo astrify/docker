@@ -15,6 +15,7 @@ RUN docker-php-ext-configure opcache --enable-opcache
 
 RUN docker-php-ext-install \
   bcmath \
+  exif \
   mbstring \
   opcache \
   pdo \
